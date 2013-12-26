@@ -5,4 +5,14 @@ mod 'puppetlabs/apt'
 mod 'puppetlabs/ntp'
 mod 'puppetlabs/postgresql'
 mod 'puppetlabs/vcsrepo'
-mod 'stankevich/python'
+mod 'torrancew/cron'
+mod 'python',
+    :git => 'https://github.com/puppetmodules/puppet-module-python.git',
+    :ref => 'e59c42a29965334780cdd356ef106b26fb454bbc'
+mod 'webapp',
+    :git => 'https://github.com/puppetmodules/puppet-module-webapp.git',
+    :ref => '1d82b68bb6b0e695cb7e42d9796efdac6670d522'
+mod 'monit',
+    :git => 'https://github.com/puppetmodules/puppet-module-monit.git'
+mod 'nginx',
+    :git => 'https://github.com/puppetmodules/puppet-module-nginx.git'
