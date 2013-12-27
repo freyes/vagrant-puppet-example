@@ -13,6 +13,8 @@ mod 'webapp',
     :git => 'https://github.com/puppetmodules/puppet-module-webapp.git',
     :ref => '1d82b68bb6b0e695cb7e42d9796efdac6670d522'
 mod 'monit',
-    :git => 'https://github.com/puppetmodules/puppet-module-monit.git'
+    :git => 'https://github.com/puppetmodules/puppet-module-monit.git',
+    :ref => '096c219ab5940ed7028871cd68f9544766311c87'
 mod 'nginx',
-    :git => 'https://github.com/puppetmodules/puppet-module-nginx.git'
+    :git => 'https://github.com/puppetmodules/puppet-module-nginx.git',
+    :ref => 'c20d758d24cbe3e5322ebe3ff52726aa5d72868c'

@@ -21,3 +21,4 @@ of dependencies are automatically installed inside the VMs
 
 * [vagrant](http://vagrantup.com)
 * [librarian-puppet](http://librarian-puppet.com/)
+* [vagrant-dns](https://github.com/BerlinVagrant/vagrant-dns)

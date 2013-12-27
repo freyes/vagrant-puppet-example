@@ -1,6 +1,9 @@
+import "classes/common.pp"
 import "site.pp"
 
 node "db01" inherits "basenode" {
+  include "force_apt_update"
+
   class { 'postgresql::server': }
 
   postgresql::server::db { 'mydatabasename':
@@ -10,6 +13,7 @@ node "db01" inherits "basenode" {
 }
 
 node "web01" inherits "basenode" {
+  include "force_apt_update"
   package { "git":
     ensure => latest
   }
@@ -19,7 +23,7 @@ node "web01" inherits "basenode" {
     uid => "777",
     password => '',
     shell => "/bin/bash",
-    groups => ['hello'],
+    groups => ['hello', 'www-data'],
     sshkeytype => "ssh-rsa",
     sshkey => "asdf"
   }
@@ -50,13 +54,6 @@ node "web01" inherits "basenode" {
                 File["/home/hello/src"]]
   }
 
-  file { "/home/hello/venv/hello/requirements.checksum":
-    ensure => present,
-    owner => "hello",
-    group => "hello",
-    require => [ User["hello"] ]
-  }
-
   class { "webapp::python":
     owner => "hello",
     group => "hello",
@@ -65,7 +62,7 @@ node "web01" inherits "basenode" {
   }
 
   webapp::python::instance { "hello":
-    domain => "test",
+    domain => "mytest",
     wsgi_module => "application",
     requirements => true,
     environment => {}
