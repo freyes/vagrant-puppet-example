@@ -4,17 +4,15 @@ mod 'puppetlabs/stdlib'
 mod 'puppetlabs/apt'
 mod 'puppetlabs/ntp'
 mod 'puppetlabs/postgresql'
+mod 'puppetlabs/mysql'
 mod 'puppetlabs/vcsrepo'
 mod 'torrancew/cron'
+mod 'adrien/network', '0.4.1'
 mod 'python',
-    :git => 'https://github.com/puppetmodules/puppet-module-python.git',
-    :ref => 'e59c42a29965334780cdd356ef106b26fb454bbc'
+    :git => 'https://github.com/puppetmodules/puppet-module-python.git'
 mod 'webapp',
-    :git => 'https://github.com/puppetmodules/puppet-module-webapp.git',
-    :ref => '1d82b68bb6b0e695cb7e42d9796efdac6670d522'
+    :git => 'https://github.com/puppetmodules/puppet-module-webapp.git'
 mod 'monit',
-    :git => 'https://github.com/puppetmodules/puppet-module-monit.git',
-    :ref => '096c219ab5940ed7028871cd68f9544766311c87'
+    :git => 'https://github.com/puppetmodules/puppet-module-monit.git'
 mod 'nginx',
-    :git => 'https://github.com/puppetmodules/puppet-module-nginx.git',
-    :ref => 'c20d758d24cbe3e5322ebe3ff52726aa5d72868c'
+    :git => 'https://github.com/puppetmodules/puppet-module-nginx.git'
