@@ -160,6 +160,8 @@ node "web01" inherits "basenode" {
 
   exec { 'migrate db':
     command     => 'bash -c "if [ -e /home/hello/venv/hello/bin/activate ]; then cd /home/hello/src/hello && source /home/hello/venv/hello/bin/activate && PYTHONPATH=. alembic upgrade head; fi"',
+    user        => "hello",
+    group       => "hello",
     environment => inline_template('DB_URI=<%= @db_uri %>'),
     logoutput   => true, #on_failure,
     refreshonly => true
